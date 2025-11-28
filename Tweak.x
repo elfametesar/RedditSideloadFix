@@ -213,7 +213,7 @@ static void initRecaptchaFix() {
     "class_addMethod", (void *)hook_class_addMethod, (void **)&orig_class_addMethod,
   }}, 1);
 }
-
+ 
 %ctor {
   originalBundleIdentifier = NSBundle.mainBundle.bundleIdentifier;
   %init;

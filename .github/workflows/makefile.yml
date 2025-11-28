@@ -50,7 +50,7 @@ jobs:
          make clean package FINALPACKAGE=1
          echo "package=$(ls -t packages | head -n1)" >> $GITHUB_OUTPUT
       - name: Upload To GitHub Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: 'Package'
           path: ${{ github.workspace }}/packages/*.deb
